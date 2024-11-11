@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pontifex Financieros - Precalificación</title>
+    <link rel="stylesheet" href="Estilos/stylesForm.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="Javascript/validacion.js"></script>
+</head>
+<body>
+    <div id="main-container">
+        <!-- Navbar -->
+        <header>
+            <div class="full-width-bg nav-bg">
+                <nav class="nav">
+                    <img src="Imagenes/logo.png" alt="Pontifex Logo" class="logo">
+                    <ul>
+                        <li class="mover-item"><a href="index.html">Inicio</a></li>
+                        <li class="mover-item">
+                            <a href="formulario.html" class="btn-precalificate">
+                                PRECALIFICARME
+                                <img src="Imagenes/imgPrecalificarme.png" alt="Icono">
+                            </a>
+                        </li>
+                        <li class="mover-item">
+                            <a href="https://wa.me/+526621873008" target="_blank" class="btn-whatsapp">
+                                <img src="Imagenes/watsap.png" alt="WhatsApp">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+    <br><br><br>
+    <div class="content-wrapper">
+    <div class="title-section">
+        <h1>Precalificarme</h1>
+    </div>
+     </div>
+
+    <!-- Sección de Precalificación -->
+    <div class="full-width-bg">
+
+        <div class="content-wrapper">
+            <div class="image-section-soluciones">
+                <img src="Imagenes/fondo2.png" class="over-image-soluciones">
+            </div>
+            <div class="precalificacion-content">
+                <!-- Sección de Texto e Imagen -->
+                <div class="text-section">
+                    <p>Completa el formulario y en breve te contactaremos para pontificar tu negocio.</p>
+                    <div class="image-section">
+                        <img src="Imagenes/fondoPrecalificate.png" alt="Imagen decorativa">
+                    </div>
+                </div>
+
+                <!-- Contenedor para el fondo del formulario -->
+                <div class="form-section-bg">
+                    <!-- Sección del Formulario -->
+                    <div class="form-section">
+                        <form action="#" method="post" class="precalificacion-form" id="precalificacionForm" novalidate>
+                            <label for="nombre-contacto">Nombre completo del contacto</label>
+                            <input type="text" id="nombre-contacto" name="nombre_contacto">
+
+                            <label for="nombre-empresa">Nombre de la empresa</label>
+                            <input type="text" id="nombre-empresa" name="nombre_empresa">
+
+                            <!-- Agrupación de "Régimen fiscal" y "Correo electrónico" en una línea -->
+                            <div class="two-column-group">
+                                <div>
+                                    <label for="regimen-fiscal">Régimen fiscal</label>
+                                    <select id="regimen-fiscal" name="regimen_fiscal">
+                                        <option value="">Selecciona el que corresponda</option>
+                                        <option value="persona_moral">Persona moral</option>
+                                        <option value="persona_fisica">Persona física con actividad empresarial</option>
+                                        <option value="resico">RESICO</option>
+                                        <option value="asalariado">Asalariado</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="correo">Correo electrónico</label>
+                                    <input type="email" id="correo" name="correo">
+                                </div>
+                            </div>
+
+                            <div class="phone-group">
+                                <div>
+                                    <label for="telefono1">Teléfono 1</label>
+                                    <input type="tel" id="telefono1" name="telefono1">
+                                </div>
+                                <div>
+                                    <label for="telefono2">Teléfono 2</label>
+                                    <input type="tel" id="telefono2" name="telefono2">
+                                </div>
+                            </div>
+
+                            <p>Estoy interesado en:</p>
+                            <div class="small-text">
+                                <p>Puedes seleccionar más de una opción.</p>
+                            </div>
+
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="credito" name="interes" value="credito">
+                                <label for="credito"><span>Crédito</span></label>
+
+                                <input type="checkbox" id="factoraje" name="interes" value="factoraje">
+                                <label for="factoraje"><span>Factoraje</span></label>
+
+                                <input type="checkbox" id="arrendamiento" name="interes" value="arrendamiento">
+                                <label for="arrendamiento"><span>Arrendamiento</span></label>
+
+                                <input type="checkbox" id="seguros" name="interes" value="seguros">
+                                <label for="seguros"><span>Seguros y Fianzas</span></label>
+                            </div>
+
+                            <label for="comentarios">¿Quieres contarnos más?</label>
+                            <textarea id="comentarios" name="comentarios" placeholder="Escribe aquí más sobre tu negocio o cómo te gustaría nuestro apoyo"></textarea>
+
+                            <button type="submit" id="enviarButton" class="submit-button">ENVIAR</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Nosotros Section -->
+    <div class="full-width-bg nosotros-bg">
+        <div class="content-wrapper">
+            <section id="nosotros">
+                <div class="nosotros-container">
+                    <div class="text-container">
+                        <h2 class="heading">SECTORES DE</h2>
+                        <h3 class="subheading">INFLUENCIA</h3>
+                    </div>
+                    <div class="description-container">
+                        <p class="description">Industria, Comercio, Minería, Agroindustria, Construcción, Logística, etc.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="full-width-bg footer-bg">
+        <div class="content-wrapper">
+            <section>
+                <footer class="footer-container">
+                    <div class="footer-section productos">
+                        <h4>Productos</h4>
+                        <ul>
+                            <li>Crédito</li>
+                            <li>Arrendamiento</li>
+                            <li>Factoraje</li>
+                            <li>Seguros</li>
+                            <li>Fianzas</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section contacto">
+                        <h4>Contáctanos</h4>
+                        <p><i class="fas fa-phone-alt"></i> <a href="tel:+526621873008">+52 662 187 3008</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:contacto@pontifex.mx">contacto@pontifex.mx</a></p>
+                        <p><i class="fas fa-map-marker-alt"></i>
+                            <a href="https://www.google.com/maps/place/Andenes+Hermosillo/@29.0855144,-110.9993734,17z/data=!4m10!1m2!2m1!1splaza+andenes!3m6!1s0x86ce84098e1b140d:0xf183c3901201119d!8m2!3d29.0859232!4d-110.9964596!15sCg1wbGF6YSBhbmRlbmVzWg8iDXBsYXphIGFuZGVuZXOSARBjb3Jwb3JhdGVfb2ZmaWNlmgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVU5FYjFCZldVeDNFQUXgAQA!16s%2Fg%2F11fxzs6mk3?entry=ttu&g_ep=EgoyMDI0MTEwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                                Blvd. Luis Donaldo Colosio, Plaza Andenes Piso 5 #503, Col. Santa Fé
+                            </a>
+                        </p>
+                    </div>
+                    <div class="footer-section noticias">
+                        <p>Entérate de las últimas noticias y promociones exclusivas de Pontifex Financieros.</p><br>
+                        <a href="#" class="suscribete-boletin">SUSCRÍBETE AL BOLETÍN ></a><br>
+                        <a href="#" class="zona-editorial">ZONA EDITORIAL ></a>
+                    </div>
+                </footer>
+                <div class="footer-bottom">
+                    <div class="social-icons-bottom">
+                        <a href="https://www.instagram.com/pontifexfinancieros" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/PontifexFinancieros" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@pontifexmx" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.linkedin.com/company/pontifexfinancieros" target="_blank"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <p>&copy; 2024 Pontifex Financieros. Todos los derechos reservados.</p>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="Javascript/validacion.js"></script>
+</body>
+</html>
