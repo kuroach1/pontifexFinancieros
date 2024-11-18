@@ -20,7 +20,9 @@ body, html {
 .content-wrapper {
     max-width: 1250px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding:  20px;
+    width: 100%;
+
 }
 
 .hero-bg {
@@ -332,7 +334,7 @@ li.mover-item {
     left: -8%;
     right: -10%;
     top: -320px;
-    z-index: 1;
+    z-index: 0;
     user-select: none;
     pointer-events: none;
 }
@@ -969,58 +971,142 @@ li.mover-item {
 
 
 
-
-
-
-
-
-
-/* RESPONSIVE DESIGN */
-@media (max-width: 1200px) {
-    .hero-section h1 {
-        font-size: 45px;
-    }
-
-    .form-section {
-        max-width: 500px;
-    }
-}
-
 @media (max-width: 768px) {
-    .nav ul {
-        display: none;
+    .precalificacion-content {
         flex-direction: column;
+        gap: 20px;
         align-items: center;
     }
 
-    .nav.active ul {
-        display: flex;
-    }
-
-    .hero-section h1 {
-        font-size: 38px;
-    }
-
-    .form-section {
-        width: 90%;
-        padding: 20px;
-    }
-}
-
-@media (max-width: 576px) {
-    .hero-section h1 {
-        font-size: 28px;
-    }
-
-    .btn-precalificate, .btn-whatsapp {
+    .form-section,
+    .text-section {
         width: 100%;
-        margin: 10px 0;
+        padding: 10px;
     }
 
     .form-section {
-        padding: 15px;
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 20px; /* Movido aquí */
+    }
+
+    .image-section img {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+        position: static;
+    }
+
+    .checkbox-group {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+        gap: 10px;
+    }
+
+    .text-section {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .form-section {
+        margin: 10px auto;
+        width: 100%; /* Movido aquí */
     }
 }
 
 
 
+/* Nosotros */
+@media (max-width: 768px) {
+    .full-width-bg.nosotros-bg {
+        padding: 20px; /* Reducir el padding para pantallas pequeñas */
+    }
+
+    .nosotros-container {
+        flex-direction: column; /* Cambiar a disposición vertical */
+        align-items: center; /* Centrar el contenido */
+        text-align: center; /* Centrar texto */
+        padding: 20px;
+        gap: 20px; /* Espaciado entre elementos */
+        margin: 0 auto; /* Centrar la sección */
+        width: 100%; /* Asegurarse de ocupar el ancho completo */
+    }
+
+    .text-container {
+        margin: 0;
+        text-align: center;
+    }
+
+    .description-container {
+        border-left: none; /* Quitar la línea divisoria en móviles */
+        padding: 0;
+        margin: 0;
+    }
+
+    .description {
+        font-size: 16px; /* Reducir tamaño de texto */
+    }
+
+    .heading {
+        font-size: 24px; /* Reducir tamaño de encabezado */
+    }
+
+    .subheading {
+        font-size: 32px; /* Reducir tamaño de subencabezado */
+    }
+}
+
+
+
+
+
+/* Footer */
+
+@media (max-width: 768px) {
+    .footer-container {
+        display: flex;
+        flex-direction: column; /* Apilar las secciones verticalmente */
+        align-items: center; /* Centrar los elementos horizontalmente */
+        text-align: center; /* Alinear el texto al centro */
+        gap: 20px; /* Espaciado entre secciones */
+        padding: 20px; /* Espaciado interno */
+    }
+
+    .footer-section {
+        margin: 0; /* Eliminar márgenes adicionales */
+        padding: 0; /* Eliminar padding interno */
+    }
+
+    .footer-section h4 {
+        font-size: 18px; /* Reducir tamaño de títulos */
+        margin-bottom: 10px; /* Espaciado con el contenido */
+    }
+
+    .footer-section ul {
+        padding: 0; /* Eliminar padding del listado */
+        list-style: none; /* Quitar viñetas */
+    }
+
+    .footer-section ul li {
+        margin-bottom: 5px; /* Espaciado entre ítems */
+    }
+
+    .social-icons-bottom {
+        display: flex;
+        justify-content: center; /* Centrar los íconos */
+        gap: 15px; /* Espaciado entre los íconos */
+    }
+
+    .footer-bottom {
+        display: flex;
+        flex-direction: column; /* Apilar contenido */
+        align-items: center; /* Centrar horizontalmente */
+        text-align: center; /* Centrar texto */
+        gap: 10px; /* Espaciado entre íconos y texto */
+        padding: 10px 0; /* Espaciado superior e inferior */
+    }
+
+    .footer-bottom p {
+        font-size: 12px; /* Reducir tamaño del texto */
+        margin: 0; /* Eliminar márgenes adicionales */
+    }
+}

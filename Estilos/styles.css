@@ -328,13 +328,23 @@ li.mover-item {
     height: 720px;
     width: auto;
     position: absolute;
-    left: -8%;
+    left: -8.7%;
     right: -10%;
     top: -250px;
-    z-index: 1;
+    z-index: 0;
     user-select: none;
     pointer-events: none;
 }
+
+.solucion {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.solucion:hover {
+    transform: scale(1.05) !important; /* Aumenta el tamaño un 5% */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra más grande */
+}
+
 
 /* influencia section */
 #influencia {
@@ -480,6 +490,37 @@ li.mover-item {
     margin-bottom: 1px;
 }
 
+
+/* Animación para el título */
+.titulo-soluciones {
+    font-size: 43px;
+    font-weight: 800;
+    color: #000;
+    text-align: left;
+    margin-bottom: 20px;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.6s ease-in-out;
+}
+
+.titulo-soluciones.focused {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Animación para las tarjetas */
+.solucion {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease-in-out;
+}
+
+.solucion.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 /* Contenedor principal del footer */
 .footer-container {
     display: flex;
@@ -583,6 +624,7 @@ li.mover-item {
 .footer-section.noticias {
     margin-top: 30px;
 }
+
 
 .suscribete-boletin, .zona-editorial {
     font-family: 'Roboto', sans-serif;
